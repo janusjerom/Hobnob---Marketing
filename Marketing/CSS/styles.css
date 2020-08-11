@@ -77,6 +77,7 @@
     background-color: #5f0505;
     }
 
+    /* Stylizing Campaign Details Page */
 
     /* Drop Down for the Campaign Details Page Type of Influencers*/
     .dropdown-check-list1 {
@@ -170,6 +171,18 @@
     }
     .dropdown-check-list2.visible2 .items2 {
     display: block;
+    }
+
+    /* Editing inputs  */
+
+    .inputTags{
+        font-size: large;
+        margin: 20px;
+        width: 80%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: whitesmoke;
     }
 
 
