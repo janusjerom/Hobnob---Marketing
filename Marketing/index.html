@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="CSS/styles.css">
+<body>
+
+<form id="regForm" action="/action_page.php">
+  <div class="tab">
+    <div>
+      <div>
+        <h1>
+          CHOOSE YOUR CAMPAIGN OBJECTIVE
+        </h1>
+        <h3>
+          (You can select more than one objective)
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Brand Awareness" oninput="this.className = ''" name="BrandAwareness">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+          <input type="button" value="Reach and Views" oninput="this.className = ''" name="ReachAndViews">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Create Content" oninput="this.className = ''" name="CreateContent">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Product Sampling" oninput="this.className = ''" name="ProductSampling">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Sales Or Downloads" oninput="this.className = ''" name="SalesOrDownloads">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Event Or Contest participation" oninput="this.className = ''" name="EventOrContestParticipation">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Community Building" oninput="this.className = ''" name="CommunityBuilding">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Research & Feedback" oninput="this.className = ''" name="ResearchandFeedback">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <input type="button" value="Drive Traffic" oninput="this.className = ''" name="DriveTraffic">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab">
+    <div>
+      <div>
+        <h1>
+          SELECT SOCIAL MEDIA PLATFORMS
+        </h1>
+        <h3>
+          (Our influencers are top users across all social media platforms. Select the platforms that you would like to activate for your campaign)
+        </h3>
+      </div>
+    </div>    
+    <div class="social-media-section">
+      <div>
+          <img class="social-media" onclick="fn1()" src="social-media/fb.jpg" alt="Facebook">
+          <img class="social-media" onclick="fn1()" src="social-media/firework.png" alt="firework">
+          <img class="social-media" onclick="fn1()" src="social-media/globe.png" alt="blog">
+          <img class="social-media" onclick="fn1()" src="social-media/helo.png" alt="helo">
+          <img class="social-media" onclick="fn1() " src="social-media/insta.jpg" alt="Instagram">
+          <img class="social-media" onclick="fn1()" src="social-media/likee.png" alt="likee">
+          <img onclick="fn1()" class="social-media" src="social-media/linkedIn.png" alt="linkedIn">        
+      </div>
+      <div>
+          <img class="social-media" onclick="fn1()" src="social-media/pinterest.png" alt="pinterest">
+          <img class="social-media" onclick="fn1()" src="social-media/snapchat.jpg" alt="snapchat">
+          <img class="social-media" onclick="fn1()" src="social-media/tiktokLogo.png" alt="tiktok">
+          <img class="social-media" onclick="fn1()" src="social-media/trell.png" alt="trell">
+          <img class="social-media" onclick="fn1()" src="social-media/tweet.jpg" alt="tweet">
+          <img class="social-media" onclick="fn1()" src="social-media/whatsapp.png" alt="whatsapp">
+          <img class="social-media" onclick="fn1()" src="social-media/youtube.jpg" alt="youtube">        
+      </div>
+    </div>
+    <div>
+      <div>
+        <h1>
+          SELECT INFLUENCER TYPE
+        </h1>
+        <h3>
+          Discover the most relevant influencers as per their standing on the popularity pyramid.
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <p>
+          MEGA [500K+]
+        </p>
+        <p>
+          Celebrities and famous personalities
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <p>
+          MACRO [50K to 500K]
+        </p>
+        <p>
+          Popular social media stars
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <p>
+          MICRO [5k to 50K]
+        </p>
+        <p>
+          Up & coming digital content creators
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <p>
+          NANO [<5K]</p>
+        <p>
+          Emerging influencers who tend to be student, working professionals & parents
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="tab">
+    <div>
+      <div>
+        <h1>
+          PLEASE ENTER THE CAMPAIGN DETAILS
+        </h1>
+        <h3>
+          (Enter the details that matter and will help us identify the right influencers for you.)
+        </h3>
+      </div>
+    </div>
+
+    <div>
+      <a href="http://" style="float: right;">Skip the step</a>
+    </div>
+
+    <div>
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="text" placeholder="Brand, agency or product" value="">
+        </div>
+        <div class="col-xs-12">
+          <input type="text" placeholder="Campaign name or hashtag" value="">
+        </div>
+        <div id="listInfluencer" class="col-xs-12 dropdown-check-list" tabindex="100">
+          <span class="anchor">Type of Influencers you would like</span>
+          <ul class="items">
+            <input type="checkbox"/>Arts<br>
+            <div class="col-xs-12">
+              <li><input type="checkbox" />Automobile</li>
+            </div>
+            
+            <li><input type="checkbox">Beauty & Makeup</li>
+            <li><input type="checkbox">Business & Statup</li>
+            <li><input type="checkbox">Education & Career </li>
+            <li><input type="checkbox">Fashion</li>
+            <li><input type="checkbox">Fitness & Health</li>
+            <li><input type="checkbox">Food & Beverages</li>
+            <li><input type="checkbox">Lifestyle</li>
+            <li><input type="checkbox">Marketing & Social Media</li>
+            <li><input type="checkbox">Movies, TV & Entertainment</li>
+            <li><input type="checkbox">Music & Dance</li>
+            <li><input type="checkbox">Photography & Videography</li>
+            <li><input type="checkbox">Society & Politics</li>
+            <li><input type="checkbox">Sports</li>
+            <li><input type="checkbox">Technology</li>
+            <li><input type="checkbox">Travel</li>
+          </ul>
+        </div>
+        <div class="col-xs-12">
+          <input type="text" placeholder="Target Cities" value="">
+        </div>
+        <div class="col-xs-12">
+          <input type="text" placeholder="Target Audience's Age" value="">
+        </div>
+        <div class="col-xs-12">
+          <input type="text" placeholder="Target Audience's Gender" value="">
+          <div>
+            <span>
+              <div class="box">
+                <p>Select one or more from the options below</p>
+                <ul>
+                  <li>
+                    <label>
+                      <span>
+                        Male
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <span>
+                        Female
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <span>
+                        Other
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <span>
+                        All
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div>
+            <p>Campaign Description</p>
+            <textarea name="campaignDescription" id="" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <p>Deliverables</p>
+          <textarea name="deliverables" id="" cols="30" rows="10"></textarea>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <h4>Reward</h4>
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-3">
+        <input type="button" value="Paid" oninput="this.className = ''" name="paid">
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <input type="button" value="Product" oninput="this.className = ''" name="product">
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <input type="button" value="Experience" oninput="this.className = ''" name="experience">
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-xs-12">
+        <input type="text" placeholder="Enter approx budget, product or experience details" value="">
+      </div>
+    </div>
+    
+  </div>
+  <div class="tab">
+    <div>
+      <div>
+        <h1>Review your campaign</h1>
+      </div>
+    </div>
+    <div>
+        <h3>Influencer Details</h3>
+    </div>
+
+    <div>
+      <p>
+        Deliverables
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Campaign Budget
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Rewards
+      </p>
+    </div>
+
+  </div>
+  <div class="tab">
+    <div>
+      <div>
+        Almost done! How do we get in touch with you?
+      </div>
+    </div>
+    <p>Contact Information/p>
+    <div>
+      <input placeholder="Contact Name">
+    </div>
+    <div>
+      <input type="text" placeholder="Phone Number">
+    </div>
+    <div>
+      <br><br><br>
+      <p> contents will be here </p>
+
+    </div>
+    <div>
+      <br><br><br>
+      <p>add within containers so that it can be done easily</p>
+    </div>
+  </div>
+  
+<br><br><br><br>
+  <div style="float:left;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Go to previous step</button>
+  </div>
+  <div style="float:right;">
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue</button>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+</body>
+<script src="JS/script.js"></script>
+</html>
