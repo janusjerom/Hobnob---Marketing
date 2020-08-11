@@ -78,18 +78,18 @@
     }
 
 
-    /* Drop Down for the Campaign Details Page */
-    .dropdown-check-list {
+    /* Drop Down for the Campaign Details Page Type of Influencers*/
+    .dropdown-check-list1 {
         display: inline-block;
     }
-    .dropdown-check-list .anchor {
+    .dropdown-check-list1 .anchor1 {
     position: relative;
     cursor: pointer;
     display: inline-block;
     padding: 5px 50px 5px 10px;
     border: 1px solid #ccc;
     }
-    .dropdown-check-list .anchor:after {
+    .dropdown-check-list1 .anchor1:after {
     position: absolute;
     content: "";
     border-left: 2px solid black;
@@ -103,24 +103,72 @@
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
     }
-    .dropdown-check-list .anchor:active:after {
+    .dropdown-check-list1 .anchor1:active:after {
     right: 8px;
     top: 21%;
     }
-    .dropdown-check-list ul.items {
+    .dropdown-check-list1 ul.items1 {
     padding: 2px;
     display: none;
     margin: 0;
     border: 1px solid #ccc;
     border-top: none;
     }
-    .dropdown-check-list ul.items li {
+    .dropdown-check-list1 ul.items1 li {
     list-style: none;
     }
-    .dropdown-check-list.visible .anchor {
+    .dropdown-check-list1.visible1 .anchor1 {
     color: #0094ff;
     }
-    .dropdown-check-list.visible .items {
+    .dropdown-check-list1.visible1 .items1 {
+    display: block;
+    }
+
+
+    /* Drop Down for the Campaign Details Page for Target Audience */
+
+    .dropdown-check-list2 {
+        display: inline-block;
+    }
+    .dropdown-check-list2 .anchor2 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 50px 5px 10px;
+    border: 1px solid #ccc;
+    }
+    .dropdown-check-list2 .anchor2:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    }
+    .dropdown-check-list2 .anchor2:active:after {
+    right: 8px;
+    top: 21%;
+    }
+    .dropdown-check-list2 ul.items2 {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    }
+    .dropdown-check-list2 ul.items2 li {
+    list-style: none;
+    }
+    .dropdown-check-list2.visible2 .anchor2 {
+    color: #0094ff;
+    }
+    .dropdown-check-list2.visible2 .items2 {
     display: block;
     }
 
