@@ -5,6 +5,8 @@
     body {
     background-color: #165674;
     }
+
+    /* The form */
     
     #regForm {
     background-color: #ffffff;
@@ -53,6 +55,8 @@
     background-color: #179288;
     }
     
+
+    /* Indicator at the bottom */
     
     .step {
     height: 15px;
@@ -72,6 +76,9 @@
     .step.finish {
     background-color: #5f0505;
     }
+
+
+    /* Drop Down for the Campaign Details Page */
     .dropdown-check-list {
         display: inline-block;
     }
@@ -115,4 +122,39 @@
     }
     .dropdown-check-list.visible .items {
     display: block;
+    }
+
+
+
+    /* Last Page */
+    .contact-form{
+        text-align: center;
+        box-sizing: border-box;
+        margin-right: 40px;
+        margin-top: 60px;
+    }
+    .icon{
+        margin-right: 0px;
+    }
+    .form-input{
+        font-size: large;
+        margin: 20px;
+        width: 80%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: whitesmoke;
+    }
+    .form-input:focus{
+        border-bottom: 2px solid blue;
+    }
+
+    #budget{
+        font-size: large;
+        margin: 5px;
+        width: 83%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: whitesmoke;
     }
