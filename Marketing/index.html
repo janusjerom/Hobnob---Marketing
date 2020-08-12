@@ -141,28 +141,29 @@
   <div class="tab">
     <div>
       <div>
-        <h1>
+        <h1  class="heading1">
           PLEASE ENTER THE CAMPAIGN DETAILS
         </h1>
-        <h3>
+        <h3 class="heading2">
           (Enter the details that matter and will help us identify the right influencers for you.)
         </h3>
       </div>
     </div>
 
     <div>
-      <a href="http://" style="float: right;">Skip the step</a>
+      <a href="http://" style="float: right; font-size: 17px; font-weight: bold; color: black;">Skip the step</a>
     </div>
 
     <div>
       <div class="row">
+
         <div class="col-xs-12">
           <input type="text" placeholder="Brand, agency or product" class="inputTags" value="">
         </div>
         <div class="col-xs-12">
           <input type="text" placeholder="Campaign name or hashtag" class="inputTags" value="">
         </div>
-        <div id="listInfluencer" class="col-xs-12 dropdown-check-list1" tabindex="100">
+        <div id="listInfluencer" class="col-xs-12 dropdown-check-list1 m-20" tabindex="100"><br>
           <span class="anchor1">Type of Influencers you would like</span>
           <ul class="items1">
             <div class="col-xs-12 col-sm-1">
@@ -269,13 +270,13 @@
             </div>
           </ul>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12"><br>
           <input type="text" placeholder="Target Cities" class="inputTags" value="">
         </div>
         <div class="col-xs-12">
           <input type="text" placeholder="Target Audience's Age" class="inputTags" value="">
         </div>
-        <div id="listTarget" class="col-xs-12 dropdown-check-list2" tabindex="100">
+        <div id="listTarget" class="col-xs-12 dropdown-check-list2 m-20" tabindex="100"><br>
           <span class="anchor2">Target Audience's Gender</span>
           <ul class="items2">
             <div class="col-xs-12 col-sm-1">
@@ -304,34 +305,39 @@
             </div>
           </ul> 
         </div>
-        <div class="col-xs-12">
-          <div>
-            <p>Campaign Description</p>
-            <textarea name="campaignDescription" id="" cols="30" rows="10"></textarea>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <p>Deliverables</p>
-          <textarea name="deliverables" id="" cols="30" rows="10"></textarea>
 
-        </div>
+            
+            <div class="col-xs-12"><br>
 
+                <div class="m-20"  style="margin-top: 10px;">
+                  <p class="sans-serif">Campaign Description</p>
+                  <textarea name="campaignDescription" id="" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="col-xs-12"><br>
+                <div class="m-20">
+                  <p class="sans-serif">Deliverables</p>
+                  <textarea name="deliverables" id="" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+          
       </div>
-    </div>
+    </div><br>
 
 
 
-    <h4>Reward</h4>
+    <h4 class="m-20 reward">Reward</h4><br>
     <div class="row">
 
-      <div class="col-xs-12 col-sm-3">
-        <input type="button" value="Paid" oninput="this.className = ''" name="paid">
+      <div class="col-xs-12 col-sm-3 m-20">
+        <input type="button" value="Paid" oninput="this.className = ''" name="paid" class="reward-input">
       </div>
-      <div class="col-xs-12 col-sm-3">
-        <input type="button" value="Product" oninput="this.className = ''" name="product">
+      <div class="col-xs-12 col-sm-3 m-20">
+        <input type="button" value="Product" oninput="this.className = ''" name="product" class="reward-input">
       </div>
-      <div class="col-xs-12 col-sm-3">
-        <input type="button" value="Experience" oninput="this.className = ''" name="experience">
+      <div class="col-xs-12 col-sm-3 m-20">
+        <input type="button" value="Experience" oninput="this.className = ''" name="experience" class="reward-input">
       </div>
     </div>
     <br><br>
