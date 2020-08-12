@@ -330,3 +330,11 @@
     filter: none;
     transition-duration: 0.5s;
     }
+
+    /*Save Button*/
+
+    #saveBtn {
+    background-color:#165674;
+    margin-left: 5%;
+    width: 180px;
+    }
