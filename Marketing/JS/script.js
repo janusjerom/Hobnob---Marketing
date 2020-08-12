@@ -56,9 +56,21 @@ function fixStepIndicator(n) {
 }
 
 var checkList = document.getElementById('listInfluencer');
-checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
-  if (checkList.classList.contains('visible'))
-    checkList.classList.remove('visible');
+checkList.getElementsByClassName('anchor1')[0].onclick = function (evt) {
+  if (checkList.classList.contains('visible1'))
+    checkList.classList.remove('visible1');
   else
-    checkList.classList.add('visible');
+    checkList.classList.add('visible1');
 }
+
+var checkLists = document.getElementById('listTarget');
+checkLists.getElementsByClassName('anchor2')[0].onclick = function (evt) {
+  if (checkLists.classList.contains('visible2'))
+    checkLists.classList.remove('visible2');
+  else
+    checkLists.classList.add('visible2');
+}
+
+var skipStep = document.getElementById('stepSkip');
+
+
