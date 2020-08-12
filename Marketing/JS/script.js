@@ -1,6 +1,12 @@
 var currentTab = 0; 
 showTab(currentTab); 
 
+var NextBtn = document.getElementById("nextBtn").disabled = true;
+
+function enableNxt() {
+  document.getElementById("nextBtn").disabled = false;
+}
+
 function showTab(n) {
   var x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
@@ -74,3 +80,48 @@ checkLists.getElementsByClassName('anchor2')[0].onclick = function (evt) {
 var skipStep = document.getElementById('stepSkip');
 
 
+// To color the first step boxes
+var stepBoxes = 0;
+function highlight(target) {
+ if(target.style.border == ""){
+   if(stepBoxes < 9){
+      target.style.border = "1px solid red";
+      stepBoxes += 1;
+   }
+ }
+ else{
+   target.style.border = "";
+   stepBoxes -= 1;
+ }
+}
+
+// To color the influencer boxes
+var influencer = 0;
+function coloring(target) {
+ if(target.style.backgroundColor == "white"){
+   if(influencer < 4){
+      target.style.backgroundColor = "#12648e";
+      influencer += 1;
+   }
+ }
+ else{
+   target.style.backgroundColor = "white";
+   influencer -= 1;
+ }
+}
+
+
+// Change filter of image  --PS: Not working
+var iconPack = 0;
+function fn1(target) {
+ if(target.style.filter == "grayscale(100%)"){
+   if(iconPack < 4){
+    target.style.filter = "";
+    iconPack += 1;
+   }
+ }
+ else{
+  target.style.filter = "greyscale(100%)";
+  iconPack -= 1;
+ }
+}
