@@ -85,7 +85,7 @@ var stepBoxes = 0;
 function highlight(target) {
  if(target.style.border == ""){
    if(stepBoxes < 9){
-      target.style.border = "1px solid red";
+      target.style.border = "2px solid red";
       stepBoxes += 1;
    }
  }
@@ -107,6 +107,21 @@ function coloring(target) {
  else{
    target.style.backgroundColor = "white";
    influencer -= 1;
+ }
+}
+
+//For reward
+var rewardBox = 0;
+function splash(target) {
+ if(target.style.border == ""){
+   if(rewardBox < 4){
+      target.style.border = "2px solid red";
+      rewardBox += 1;
+   }
+ }
+ else{
+   target.style.border = "";
+   rewardBox -= 1;
  }
 }
 
