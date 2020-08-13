@@ -85,7 +85,7 @@ var stepBoxes = 0;
 function highlight(target) {
  if(target.style.border == ""){
    if(stepBoxes < 9){
-      //target.style.border = "1px solid red";
+      target.style.border = "1px solid red";
       stepBoxes += 1;
    }
  }
