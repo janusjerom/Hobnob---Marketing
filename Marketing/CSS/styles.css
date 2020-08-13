@@ -27,27 +27,22 @@
     line-height: 16px;
     }
     input {
-    padding: 10px;
     width: 100%;
     font-size: 17px;
     font-family: Raleway;
-    border: 1px solid #888888;
+    border: 1px solid #13658e;
 
     }
     .input-page1{
-    padding: 10px;
     width: 100%;
     font-size: 17px;
     font-family: Raleway;
-    border: 1px solid #888888;
     background-color: #d9e7ee;
-    /*border: 3px solid #13658e;*/
     height: 120px;
-    margin:0px 25px 25px 0px;
-    font-weight: 500px;
+    margin:0px 0px 25px 0px;
     font-weight: 600;
     }
-    
+   
     input.invalid {
     background-color: #ffdddd;
     }
