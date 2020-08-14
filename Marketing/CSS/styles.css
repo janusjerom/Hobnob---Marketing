@@ -28,14 +28,14 @@
     }
     input {
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
     font-family: Raleway;
     border: 1px solid #13658e;
 
     }
     .input-page1{
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
     font-family: Raleway;
     background-color: #d9e7ee;
     height: 120px;
@@ -328,7 +328,7 @@
     font-weight: 600;
     font-family: sans-serif;
     color:black;
-    font-size: 24px;
+    font-size: 16px;
     }
 
     .fontstyle2{
