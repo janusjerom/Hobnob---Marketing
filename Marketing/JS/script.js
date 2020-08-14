@@ -1,12 +1,15 @@
 var currentTab = 0; 
 showTab(currentTab); 
 
+// Making continue button to disabled by default
 var NextBtn = document.getElementById("nextBtn").disabled = true;
 
+// For disabling continue button until save is clicked
 function enableNxt() {
   document.getElementById("nextBtn").disabled = false;
 }
 
+// It converts the continue button to submit in the last page
 function showTab(n) {
   var x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
@@ -24,6 +27,7 @@ function showTab(n) {
   fixStepIndicator(n)
 }
 
+// Fixes for continue and previous button
 function nextPrev(n) {
   var x = document.getElementsByClassName("tab");
   if (n == 1 && !validateForm()) {
@@ -39,6 +43,7 @@ function nextPrev(n) {
   showTab(currentTab);
 }
 
+//validates the input fields
 function validateForm() {
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
@@ -55,6 +60,7 @@ function validateForm() {
   return valid; 
 }
 
+// For step indicator at the bottom
 function fixStepIndicator(n) {
   var i, x = document.getElementsByClassName("step");
   for (i = 0; i < x.length; i++) {
@@ -63,6 +69,7 @@ function fixStepIndicator(n) {
   x[n].className += " active";
 }
 
+// Dropdown for list of influencers
 var checkList = document.getElementById('listInfluencer');
 checkList.getElementsByClassName('anchor1')[0].onclick = function (evt) {
   if (checkList.classList.contains('visible1'))
@@ -71,6 +78,7 @@ checkList.getElementsByClassName('anchor1')[0].onclick = function (evt) {
     checkList.classList.add('visible1');
 }
 
+// Dropdown for target list
 var checkLists = document.getElementById('listTarget');
 checkLists.getElementsByClassName('anchor2')[0].onclick = function (evt) {
   if (checkLists.classList.contains('visible2'))
@@ -127,18 +135,13 @@ function splash(target) {
  }
 }
 
+// Changing social media icon stack
+var socialMediaIcons= document.getElementsByClassName('social-media');
+Array.from(socialMediaIcons).forEach((element, index)=>{
+  element.addEventListener('click',(event)=>{
+    
+    element.classList.toggle('display')
 
-// Change filter of image  --PS: Not working
-var iconPack = 0;
-function fn1(target) {
- if(target.style.filter == "grayscale(100%)"){
-   if(iconPack < 4){
-    target.style.filter = "greyscale(0)";
-    iconPack += 1;
-   }
- }
- else{
-  target.style.filter = "greyscale(100%)";
-  iconPack -= 1;
- }
-}
+  })
+
+})
