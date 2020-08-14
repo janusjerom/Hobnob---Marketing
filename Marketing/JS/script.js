@@ -26,7 +26,9 @@ function showTab(n) {
 
 function nextPrev(n) {
   var x = document.getElementsByClassName("tab");
-  if (n == 1 && !validateForm()) return false;
+  if (n == 1 && !validateForm()) {
+    return false;
+  }
   x[currentTab].style.display = "none";
   currentTab = currentTab + n;
   if (currentTab >= x.length) {
@@ -85,7 +87,7 @@ var stepBoxes = 0;
 function highlight(target) {
  if(target.style.border == ""){
    if(stepBoxes < 9){
-      target.style.border = "2px solid red";
+      target.style.border = "2px solid #F3D308";
       stepBoxes += 1;
    }
  }
@@ -100,7 +102,7 @@ var influencer = 0;
 function coloring(target) {
  if(target.style.backgroundColor == "white"){
    if(influencer < 4){
-      target.style.backgroundColor = "#12648e";
+      target.style.backgroundColor = "#F3D308"; //12648e
       influencer += 1;
    }
  }
