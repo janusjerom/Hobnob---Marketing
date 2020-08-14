@@ -16,7 +16,10 @@
     min-width: 300px;
     }
     
-    h4{
+    /*h1 {
+    text-align: center;  
+    }*/
+     h4{
     font-size: 20px;
     color: #858585;
     margin: 30px 0;
@@ -25,13 +28,14 @@
     }
     input {
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-family: Raleway;
     border: 1px solid #13658e;
+
     }
     .input-page1{
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-family: Raleway;
     background-color: #d9e7ee;
     height: 120px;
@@ -142,9 +146,6 @@
     .dropdown-check-list1:hover ul {
     display: block;
     }
-    .dropdown-check-list1:focus{
-        outline: none;
-    }
 
 
     /* Drop Down for the Campaign Details Page for Target Audience */
@@ -199,9 +200,6 @@
     .dropdown-check-list2:hover ul {
     display: block;
     }
-    .dropdown-check-list2:focus{
-        outline: none;
-    }
 
     /* Editing inputs  */
 
@@ -216,18 +214,10 @@
         background-color: transparent;
     }
 
-    .inputTags:focus{
-        outline: none;
-    }
-
     textarea{
     width: 85%;
     border:1px solid lightgrey;
     border-radius: 20px;
-    }
-
-    textarea:focus{
-        outline: none;
     }
 
    .sans-serif{
@@ -280,7 +270,6 @@
     }
     .form-input:focus{
         border-bottom: 2px solid blue;
-        outline: none;
     }
 
     #budget{
@@ -293,18 +282,27 @@
         border-bottom: 1px solid black;
         background-color: white;
     }
-    
-    #budget:focus{
-        outline: none;
+
+    #budget option{
+        color: black;
+        font-size: 20px;
+        background-color: #eef2df;
+        font-family: sans-serif;
+        padding: 10px;
+        height: 250px;
+
     }
+    option[value=""][disabled] {
+        display: none;
+      }
 
 
     /*Headings*/
 
     .heading1{
-    font-weight: 600;
+    font-weight: 400;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 3.5rem;
     color: #000;
     margin: 0 0 20px 0;
     text-align:left;
@@ -313,12 +311,10 @@
 
     .heading2{
     font-size: 21px;
-    color: #000000;
+    color:#bac2c0;
     font-family: Roboto-Light;
     font-weight: 600;
     }
-
-
 
     .flex{
     width: 85%;
@@ -340,39 +336,84 @@
     border: 1px solid lightgrey;
     background: white;
     }
-
     .fontstyle1{
     margin-top: 20px;
     font-weight: 600;
     font-family: sans-serif;
     color:black;
-    font-size: 15px;
+    font-size: 14px;
     }
 
     .fontstyle2{
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     color: #858585;
+    font-weight: bolder;
     }
 
+    .review-font{
+        font-weight: 600;
+        font-size: 15px;
+        color: #8c8c8c;
+    }
+
+    .detail-font{
+        font-size: 15px;
+        font-weight: bold;
+    }
 
     /* SOCIAL MEDIA ICONS */
+
     .social-media {
-    background-color: none;
-    padding: 5px;
+    filter: grayscale();
     margin-top: 10px;
     margin-right: 20px;
     margin-left: 20px;
-    border-radius: 10px;
     border: none;
     }
     
-    /* Social media icons default filter */
-    .display{
-        filter: grayscale(100%);
+    .social-media2{
+    filter: none;
+    transition-duration: 0.5s;
+    } 
+
+    .container-social{
+        height: 300px;
+        width: 100%;
+        background-color: transparent;
+        margin-left: -15px; 
     }
 
+    .container-social >div{
+        height: 150px;
+        width: auto;
+        margin:2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    
+    .container-social  ul li{
+        display: inline-block;
+        list-style: none;
+    }
+    .container-social ul li img {
+         border-radius: 50%;
+    }
+
+
+    .one{
+        background-color: white;
+    }
+    
+    .two{
+        background-color: white;
+    }
+   
+
     /*Save Button*/
+
     #saveBtn {
         background-color:#165674;
         margin-left: 5%;
