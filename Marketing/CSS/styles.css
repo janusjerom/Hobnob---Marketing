@@ -146,6 +146,9 @@
     .dropdown-check-list1:hover ul {
     display: block;
     }
+    .dropdown-check-list1:focus{
+        outline: none;
+    }
 
 
     /* Drop Down for the Campaign Details Page for Target Audience */
@@ -200,6 +203,9 @@
     .dropdown-check-list2:hover ul {
     display: block;
     }
+    .dropdown-check-list2:focus{
+        outline: none;
+    }
 
     /* Editing inputs  */
 
@@ -214,10 +220,18 @@
         background-color: transparent;
     }
 
+    .inputTags:focus{
+        outline: none;
+    }
+
     textarea{
     width: 85%;
     border:1px solid lightgrey;
     border-radius: 20px;
+    }
+    
+    textarea:focus{
+        outline: none;
     }
 
    .sans-serif{
@@ -270,6 +284,7 @@
     }
     .form-input:focus{
         border-bottom: 2px solid blue;
+        outline: none;
     }
 
     #budget{
@@ -281,6 +296,10 @@
         border-right: none;
         border-bottom: 1px solid black;
         background-color: white;
+    }
+     
+    #budget:focus{
+        outline: none;
     }
 
 
@@ -340,10 +359,13 @@
     /* SOCIAL MEDIA ICONS */
 
     .social-media {
-    filter: grayscale();
+    filter: grayscale(100%);
+    background-color: none;
+    padding: 5px;
     margin-top: 10px;
     margin-right: 20px;
     margin-left: 20px;
+    border-radius: 10px;
     border: none;
     }
     
