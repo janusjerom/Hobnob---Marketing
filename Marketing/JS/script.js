@@ -131,7 +131,7 @@ var iconPack = 0;
 function fn1(target) {
  if(target.style.filter == "grayscale(100%)"){
    if(iconPack < 4){
-    target.style.filter = "";
+    target.style.filter = "greyscale(0)";
     iconPack += 1;
    }
  }
