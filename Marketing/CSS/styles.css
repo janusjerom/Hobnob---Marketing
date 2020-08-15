@@ -286,12 +286,16 @@
     }
 
     #budget{
-    color: black;
-    font-size: 20px;
-    background-color: #eef2df;
-    font-family: sans-serif;
-    padding: 10px;
-    height: 250px;
+    color: lightgrey;
+    font-size: 18px;
+    background-color: white;
+    /*font-family: sans-serif;*/
+    /*padding: 10px;*/
+    height: 25px;
+    width: 85%;
+    border-top: none;
+    border-left: none;
+    border-right: none; 
     }
 
     option[value=""][disabled] {
@@ -388,11 +392,11 @@
 
     .container-social >div{
     height: 150px;
-    width: auto;
+    width: 100%;
     margin: 2px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     }
 
@@ -402,11 +406,13 @@
     }
 
     .container-social ul li img {
+        height: 85px;
+        width: 85px;
     border-radius: 50%;
     }
 
     .one{
-    background-color: white;
+    background-color:white;
     }
 
     .two{
