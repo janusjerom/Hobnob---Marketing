@@ -4,7 +4,7 @@ This is a solution given for a company to handle users interested in promoting t
 ## Contributors
 Contributors who have actively contributed to the success of the project
 
-* **Aman Srivastava ** - [Profile](https://github.com/aman11srivastava)
+* **Aman Srivastava** - [Profile](https://github.com/aman11srivastava)
 * **Aatir** - [Profile](https://github.com/Aatir1224)
 * **Janus Jerom** - [Profile](https://github.com/janusjerom)
 
