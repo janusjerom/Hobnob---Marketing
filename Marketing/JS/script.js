@@ -145,3 +145,69 @@ Array.from(socialMediaIcons).forEach((element, index)=>{
   })
 
 })
+
+
+// On checking checkbox it should append a new class in influencers
+
+//To separately click on close button
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// To create append a new container with close button on top
+var newContainer = document.getElementsByTagName("checkedElements");
+var i;
+for (i = 0; i < newContainer.length; i++) {
+  var span = document.createElement("SPAN");
+  var text = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(text);
+  newContainer[i].appendChild(span);
+}
+
+// To check whether the checkbox is checked
+// function checkBoxEvt(){
+//   var checkBox = document.getElementsByClassName('checkBoxes');
+//   if (checkBox.checked == true){
+//     newContainer()
+//   } else {
+//     close();
+//   }
+// }
+
+
+
+var checkBoxes= document.getElementsByClassName('checkBoxes');
+var checkName= document.getElementsByClassName('checkName');
+var selectedItems= document.getElementById('selectedItem');
+
+
+Array.from(checkBoxes).forEach((element,index)=>{
+  element.addEventListener('change',(event)=>{
+    if(element.checked){
+      selectedItems.innerHTML +=`<span>${checkName[index].innerHTML}</span>`+`<span.close>${"\u00D7"}</span>`
+        }else if(element.checked != true){
+          selectedItems.innerHTML -=`<span>${checkName[index].innerHTML}</span>`+`<span.close>${"\u00D7"}</span>`
+    }
+  }); 
+})
+
+
+var targetCheckBox = document.getElementsByClassName('targetBox');
+var targetName = document.getElementsByClassName('targetName');
+var displayItems = document.getElementById('targetDisplay');
+
+Array.from(targetCheckBox).forEach((element, index)=>{
+  element.addEventListener('change', (event)=>{
+    if(element.checked){
+      displayItems.innerHTML +=`<span>${targetName[index].innerHTML}</span>`+`<span.closes>${"\u00D7"}</span>`
+        } else if(element.checked != true){
+          displayItems.innerHTML -=`<span>${targetName[index].innerHTML}</span>`+`<span.closes>${"\u00D7"}</span>`
+    }
+  });
+})
