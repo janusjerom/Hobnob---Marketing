@@ -185,29 +185,39 @@ for (i = 0; i < newContainer.length; i++) {
 var checkBoxes= document.getElementsByClassName('checkBoxes');
 var checkName= document.getElementsByClassName('checkName');
 var selectedItems= document.getElementById('selectedItem');
-
+var inserted = document.getElementsByClassName('inserted');
 
 Array.from(checkBoxes).forEach((element,index)=>{
   element.addEventListener('change',(event)=>{
     if(element.checked){
-      selectedItems.innerHTML +=`<span>${checkName[index].innerHTML}</span>`+`<span.close>${"\u00D7"}</span>`
+      var insertedValue=checkName[index].innerHTML;
+      selectedItems.innerHTML +=`<span class="inserted">${insertedValue}</span>`
         }else if(element.checked != true){
-          selectedItems.innerHTML -=`<span>${checkName[index].innerHTML}</span>`+`<span.close>${"\u00D7"}</span>`
-    }
-  }); 
+          Array.from(inserted).forEach((value,loc)=>{
+            if(value.innerHTML===checkName[index].innerHTML){
+              value.parentNode.removeChild(value);
+            }
+          })  
+        }  
+  });
 })
-
 
 var targetCheckBox = document.getElementsByClassName('targetBox');
 var targetName = document.getElementsByClassName('targetName');
 var displayItems = document.getElementById('targetDisplay');
+var insertedTargets = document.getElementsByClassName('insertedTargets');
 
 Array.from(targetCheckBox).forEach((element, index)=>{
   element.addEventListener('change', (event)=>{
     if(element.checked){
-      displayItems.innerHTML +=`<span>${targetName[index].innerHTML}</span>`+`<span.closes>${"\u00D7"}</span>`
+      var insertTag = targetName[index].innerHTML;
+      displayItems.innerHTML +=`<span class="insertedTargets">${insertTag}</span>`
         } else if(element.checked != true){
-          displayItems.innerHTML -=`<span>${targetName[index].innerHTML}</span>`+`<span.closes>${"\u00D7"}</span>`
-    }
+          Array.from(insertedTargets).forEach((value,loc)=>{
+            if(value.innerHTML === targetName[index].innerHTML){
+              value.parentNode.removeChild(value);
+            }
+          })
+      }
   });
 })
