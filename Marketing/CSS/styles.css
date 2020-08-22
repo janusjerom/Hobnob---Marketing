@@ -74,7 +74,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #666161;
+    background-color: #ffdf52;
     border: none;  
     border-radius: 50%;
     display: inline-block;
@@ -86,7 +86,7 @@
     }
 
     .step.finish {
-    background-color: #5f0505;
+    background-color: green;
     }
 
     /* Stylizing Campaign Details Page */
@@ -148,6 +148,27 @@
     outline: none;
     }
 
+    .checkBoxes:focus{
+        outline: none;
+    }
+
+    #selectedItem{
+        background-color: white;
+    }
+
+    .inserted{
+        background-color: #377a9f;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
 
     /* Drop Down for the Campaign Details Page for Target Audience */
 
@@ -203,6 +224,23 @@
     }
     .dropdown-check-list2:focus{
     outline: none;
+    }
+
+    .targetBox{
+        outline: none;
+    }
+
+    .insertedTargets{
+        background-color: #377a9f;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
     }
 
     /* Editing inputs  */
