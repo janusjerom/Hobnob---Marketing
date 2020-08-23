@@ -147,77 +147,88 @@ Array.from(socialMediaIcons).forEach((element, index)=>{
 })
 
 
-// On checking checkbox it should append a new class in influencers
+// On checking checkbox it should append a new component and to remove it!
 
-//To separately click on close button
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// To create append a new container with close button on top
-var newContainer = document.getElementsByTagName("checkedElements");
-var i;
-for (i = 0; i < newContainer.length; i++) {
-  var span = document.createElement("SPAN");
-  var text = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(text);
-  newContainer[i].appendChild(span);
-}
-
-// To check whether the checkbox is checked
-// function checkBoxEvt(){
-//   var checkBox = document.getElementsByClassName('checkBoxes');
-//   if (checkBox.checked == true){
-//     newContainer()
-//   } else {
-//     close();
-//   }
-// }
-
-
-
+// For target influencers
 var checkBoxes= document.getElementsByClassName('checkBoxes');
 var checkName= document.getElementsByClassName('checkName');
 var selectedItems= document.getElementById('selectedItem');
 var inserted = document.getElementsByClassName('inserted');
 
+selectedItems.addEventListener("click", function(e) { 
+  if(e.target && e.target.nodeName == "I") {  
+    Array.from(checkBoxes).forEach((element,index)=>{
+      if(e.target.parentElement.innerText===checkName[index].innerHTML){
+        checkBoxes[index].checked=false
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode)
+        
+      } 
+    })
+     
+   }
+});
+
 Array.from(checkBoxes).forEach((element,index)=>{
   element.addEventListener('change',(event)=>{
+    
     if(element.checked){
       var insertedValue=checkName[index].innerHTML;
-      selectedItems.innerHTML +=`<span class="inserted">${insertedValue}</span>`
+      selectedItems.innerHTML +=`<span class="inserted">${insertedValue}<i class="fa fa-times"></i></span>`
+      
         }else if(element.checked != true){
-          Array.from(inserted).forEach((value,loc)=>{
-            if(value.innerHTML===checkName[index].innerHTML){
-              value.parentNode.removeChild(value);
-            }
-          })  
-        }  
-  });
+    Array.from(inserted).forEach((value,loc)=>{
+     
+      if(value.innerText===checkName[index].innerHTML){
+        value.parentNode.removeChild(value)
+      }
+      
+    })       
+  
+    }
+  
+  }); 
+ 
+  
 })
 
+// For target audience
 var targetCheckBox = document.getElementsByClassName('targetBox');
 var targetName = document.getElementsByClassName('targetName');
 var displayItems = document.getElementById('targetDisplay');
 var insertedTargets = document.getElementsByClassName('insertedTargets');
 
-Array.from(targetCheckBox).forEach((element, index)=>{
-  element.addEventListener('change', (event)=>{
+displayItems.addEventListener("click", function(e) { 
+  if(e.target && e.target.nodeName == "I") {  
+    Array.from(targetCheckBox).forEach((element,index)=>{
+      if(e.target.parentElement.innerText===targetName[index].innerHTML){
+        targetCheckBox[index].checked=false
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode)
+        
+      } 
+    })
+     
+   }
+});
+
+Array.from(targetCheckBox).forEach((element,index)=>{
+  element.addEventListener('change',(event)=>{
+    
     if(element.checked){
-      var insertTag = targetName[index].innerHTML;
-      displayItems.innerHTML +=`<span class="insertedTargets">${insertTag}</span>`
-        } else if(element.checked != true){
-          Array.from(insertedTargets).forEach((value,loc)=>{
-            if(value.innerHTML === targetName[index].innerHTML){
-              value.parentNode.removeChild(value);
-            }
-          })
+      var insertedValues=targetName[index].innerHTML;
+      displayItems.innerHTML +=`<span class="insertedTargets">${insertedValues}<i class="fa fa-times"></i></span>`
+      
+        }else if(element.checked != true){
+    Array.from(insertedTargets).forEach((value,loc)=>{
+     
+      if(value.innerText===targetName[index].innerHTML){
+        value.parentNode.removeChild(value)
       }
-  });
+      
+    })       
+  
+    }
+  
+  }); 
+ 
+  
 })
