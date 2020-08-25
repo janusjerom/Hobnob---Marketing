@@ -87,7 +87,15 @@ checkLists.getElementsByClassName('anchor2')[0].onclick = function (evt) {
     checkLists.classList.add('visible2');
 }
 
-var skipStep = document.getElementById('stepSkip');
+//Dropdown for target cities
+var checkLists = document.getElementById('listCities');
+checkLists.getElementsByClassName('anchor3')[0].onclick = function (evt) {
+  if (checkLists.classList.contains('visible3'))
+    checkLists.classList.remove('visible3');
+  else
+    checkLists.classList.add('visible3');
+}
+
 
 
 // To color the first step boxes
@@ -154,6 +162,7 @@ var checkBoxes= document.getElementsByClassName('checkBoxes');
 var checkName= document.getElementsByClassName('checkName');
 var selectedItems= document.getElementById('selectedItem');
 var inserted = document.getElementsByClassName('inserted');
+var spans = document.getElementsByTagName('span');
 
 selectedItems.addEventListener("click", function(e) { 
   if(e.target && e.target.nodeName == "I") {  
@@ -221,6 +230,47 @@ Array.from(targetCheckBox).forEach((element,index)=>{
     Array.from(insertedTargets).forEach((value,loc)=>{
      
       if(value.innerText===targetName[index].innerHTML){
+        value.parentNode.removeChild(value)
+      }
+      
+    })       
+  
+    }
+  
+  }); 
+ 
+  
+})
+
+var cityCheckBox = document.getElementsByClassName('cityTarget');
+var cityName = document.getElementsByClassName('cityNames');
+var cityItems = document.getElementById('CityDisplay');
+var insertedCities = document.getElementsByClassName('insertedCities');
+
+cityItems.addEventListener("click", function(e) { 
+  if(e.target && e.target.nodeName == "I") {  
+    Array.from(cityCheckBox).forEach((element,index)=>{
+      if(e.target.parentElement.innerText===cityName[index].innerHTML){
+        cityCheckBox[index].checked=false
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode)
+        
+      } 
+    })
+     
+   }
+});
+
+Array.from(cityCheckBox).forEach((element,index)=>{
+  element.addEventListener('change',(event)=>{
+    
+    if(element.checked){
+      var insertedCity=cityName[index].innerHTML;
+      cityItems.innerHTML +=`<span class="insertedCities">${insertedCity}<i class="fa fa-times"></i></span>`
+      
+        }else if(element.checked != true){
+    Array.from(insertedCities).forEach((value,loc)=>{
+     
+      if(value.innerText===cityName[index].innerHTML){
         value.parentNode.removeChild(value)
       }
       
