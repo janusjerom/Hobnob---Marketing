@@ -5,7 +5,7 @@
     body {
     background-color: rgb(241, 241, 241);
     }
-
+ 
     /* The form */    
     #regForm {
     background-color: #ffffff;
@@ -502,12 +502,13 @@
     }
 
     /* SOCIAL MEDIA ICONS */
+
     .social-media {
     background-color: none;
     padding: 5px;
     margin-top: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
+    /* margin-right: 20px;
+    margin-left: 20px; */
     border: none;
     }
 
@@ -518,6 +519,10 @@
     margin-left: -15px; 
     }
 
+    .container-social {
+        display: flex;
+    }
+
     .container-social >div{
     height: 150px;
     width: 100%;
@@ -525,7 +530,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
     }
 
     .container-social  ul li{
@@ -536,7 +540,7 @@
     .container-social ul li img {
         height: 85px;
         width: 85px;
-    border-radius: 50%;
+        border-radius: 50%;
     }
 
     .one{
